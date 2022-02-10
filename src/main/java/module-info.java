@@ -3,6 +3,6 @@ module com.example.muzeumfrontendjavafx {
     requires javafx.fxml;
 
 
-    opens com.example.muzeumfrontendjavafx to javafx.fxml;
-    exports com.example.muzeumfrontendjavafx;
+    opens hu.petrik.muzeumfrontendjavafx to javafx.fxml;
+    exports hu.petrik.muzeumfrontendjavafx;
 }
