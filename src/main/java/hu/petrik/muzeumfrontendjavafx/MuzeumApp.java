@@ -12,7 +12,7 @@ public class MuzeumApp extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MuzeumApp.class.getResource("statue-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Szobrok és festmények");
         stage.setScene(scene);
         stage.show();
     }
