@@ -10,7 +10,7 @@ import java.io.IOException;
 public class MuzeumApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MuzeumApp.class.getResource("statue-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MuzeumApp.class.getResource("megjelenit-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Szobrok és festmények");
         stage.setScene(scene);
