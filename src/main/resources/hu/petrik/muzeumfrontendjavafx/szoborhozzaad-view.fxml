@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="hu.petrik.muzeumfrontendjavafx.SzoborhozzaadController"
+            fx:controller="hu.petrik.muzeumfrontendjavafx.controllers.SzoborhozzaadController"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

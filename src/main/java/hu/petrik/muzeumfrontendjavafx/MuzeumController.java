@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class StatueController {
+public class MuzeumController {
 
     @FXML private Button szoborTorolBtn;
     @FXML private TableColumn colSzoborMag;
@@ -23,21 +23,27 @@ public class StatueController {
     @FXML private TableColumn colfestmenyEv;
     @FXML private Button szoborUjBtn;
 
+    @FXML
     public void szoborTorol(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void editSzobor(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void ujSzobor(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void ujFestmeny(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void editFestmeny(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void festmenyTorol(ActionEvent actionEvent) {
     }
 }
