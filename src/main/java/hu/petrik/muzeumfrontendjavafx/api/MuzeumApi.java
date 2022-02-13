@@ -25,8 +25,8 @@ public class MuzeumApi {
         } else {
             Type type = new TypeToken<List<Szobrok>>() {
             }.getType();
-            List<Szobrok> szoborList = gson.fromJson(json, type);
-            return szoborList;
+            List<Szobrok> szoborLista = gson.fromJson(json, type);
+            return szoborLista;
         }
     }
 
@@ -47,8 +47,8 @@ public class MuzeumApi {
         } else {
             Type type = new TypeToken<List<Festmeny>>() {
             }.getType();
-            List<Festmeny> festmenyList = gson.fromJson(json, type);
-            return festmenyList;
+            List<Festmeny> festmenyLista = gson.fromJson(json, type);
+            return festmenyLista;
         }
     }
     public static boolean festmenyTorlese(int id) throws IOException {
