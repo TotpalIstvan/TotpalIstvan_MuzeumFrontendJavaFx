@@ -30,6 +30,32 @@ public class MuzeumApi {
         }
     }
 
+    public static Szobrok szoborHozzadasa(Szobrok uj) throws IOException {
+        Gson gAdd = new Gson();
+        String szJson = gAdd.toJson(uj);
+        Response response = RequestHandler.post(SZOBOR_API_URL, szJson);
+
+        String json = response.getContent();
+        if (response.getResponseCode() >= 400) {
+            String message = gAdd.fromJson(json, Error.class).getMsg();
+            throw new IOException(message);
+        }
+        return gAdd.fromJson(json,Szobrok.class);
+    }
+
+    public static Szobrok szoborModositasa(Szobrok editable) throws IOException {
+        Gson gEdit = new Gson();
+        String szJson = gEdit.toJson(editable);
+        Response response = RequestHandler.put(SZOBOR_API_URL, szJson);
+
+        String json = response.getContent();
+        if (response.getResponseCode() >= 400) {
+            String message = gEdit.fromJson(json, Error.class).getMsg();
+            throw new IOException(message);
+        }
+        return gEdit.fromJson(json,Szobrok.class);
+    }
+
     public static boolean szoborTorlese(int id) throws IOException {
         return torlesBody(id, SZOBOR_API_URL);
     }
@@ -51,6 +77,33 @@ public class MuzeumApi {
             return festmenyLista;
         }
     }
+
+    public static Festmeny festmenyHozzaadasa(Festmeny ujFestmeny) throws IOException {
+        Gson gAdd = new Gson();
+        String fJson = gAdd.toJson(ujFestmeny);
+        Response response = RequestHandler.post(FESTMENY_API_URL, fJson);
+
+        String json = response.getContent();
+        if (response.getResponseCode() >= 400) {
+            String message = gAdd.fromJson(json, Error.class).getMsg();
+            throw new IOException(message);
+        }
+        return gAdd.fromJson(json, Festmeny.class);
+    }
+
+    public static Festmeny festmenyModositasa(Festmeny modositando) throws IOException {
+        Gson gEdit = new Gson();
+        String fJson = gEdit.toJson(modositando);
+        Response response = RequestHandler.put(FESTMENY_API_URL + "/" + modositando.getId(), fJson);
+
+        String json = response.getContent();
+        if (response.getResponseCode() >= 400) {
+            String message = gEdit.fromJson(json, Error.class).getMsg();
+            throw new IOException(message);
+        }
+        return gEdit.fromJson(json, Festmeny.class);
+    }
+
     public static boolean festmenyTorlese(int id) throws IOException {
         return torlesBody(id, FESTMENY_API_URL);
     }
