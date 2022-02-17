@@ -32,6 +32,7 @@ public class Controller {
                 Platform.runLater(() -> errorAlert.show());
             }
         }, 1000);
+
     }
 
     protected void alert(String msg) {
