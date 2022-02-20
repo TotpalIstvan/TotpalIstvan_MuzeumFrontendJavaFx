@@ -44,4 +44,6 @@ public class Festmeny {
     public void setKiallitva(boolean kiallitva) {
         this.kiallitva = kiallitva;
     }
+
+
 }
